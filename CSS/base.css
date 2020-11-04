@@ -1,0 +1,31 @@
+/* 此文件所有页面都用的全局css */
+body {
+	/* 选择所有的元素 */
+	/* box-sizing:content-box;内容盒子 */
+	box-sizing:border-box;
+	/* 边框盒子，简化盒子尺寸计算 */
+	}
+	body{
+	margin: 0;
+	color: #555;
+	background: #fff;
+	font-family: "arial,helvetica,sans-serif";
+	/* 字体 */
+	font-size: 12px;
+	/* 字体大小 */
+	line-height: 1.667em;
+	/* 行高1.66em=1.66*font-size */
+}
+
+a {
+	color: #555;
+	text-decoration: nome;
+}
+
+a:hover {
+	/* 伪类选择题，选中“鼠标悬停的状态 */
+	color: #f60
+}
+
+
+
