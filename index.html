@@ -21,7 +21,6 @@
 				width: 1000px;
 				margin-left: auto;
 				margin-right: auto;
-				border: 1px solid #aaa;
 
 			}
 
@@ -36,7 +35,11 @@
 
 			.theme-reverse {
 				/* 主题色的反色 */
-				color: #fff;
+				color: #f60;
+			}
+			.searchbar{
+				width: 100%;
+				background: #fff;
 			}
 			.searchbar>.container {
 				padding-top: 2em;
@@ -45,7 +48,7 @@
 			.search{
 				float: right;
 				/* 搜索条右浮动 */
-				margin-top: 6px;
+				margin-top: 7px;
 			}
 			.search>input{
 				width: 430px;
@@ -53,20 +56,65 @@
 				border:1px solid #ccc ;
 				/* 输入框获得焦点时的外围轮廓线 */
 				outline: none
-				/* .6是0.6的意思 */
-				padding-left:.6em;
-				padding-right: .6em;
+				/* .8是0.8的意思 */
+				padding-left:.8em;
+				padding-right: .8em;
+				vertical-align: middle;
+				/* 行内块元素与同一行中内容数直对齐 */
+				vertical-align: middle;
 			}
 			.search>.fa-search{
 				background: #57bc4c;
 				color: #fff;
-				font-size: 2em;
-				width: 3.125rem;
+				font-size: 2.2em;
+				width: 50px;
 				height: 32px;
 				line-height: 32px;
 				/* 文字竖直方向上居中 */
 				text-align: center;
 				/* 文字水平方向上居中 */
+				vertical-align: middle;
+			}
+			.cart{
+				float:right;
+				background: #f9f9f9;
+				border: 1px solid #ddd;
+				line-height: 30px;
+				margin-top: 6px;
+				margin-left:20px;
+				/* 修改光标样式 */
+				cursor: pointer;
+				/* 修改购物车定位方式，为下拉菜单提供参照物 */
+				position: relative;
+			}
+			.cart>.caret{
+				/* 动画基础类 */
+				padding-left: 0.6em;
+				padding-right:0.6em ;
+				color: #57BC4C;
+			}
+				.cart>.caret{
+				transform: rotate(0);
+				transition: all .3s;
+				/* 渐变动画 */
+			}
+			.cart>.caret-rotate{
+				/* 小三角动画目标类 */
+				transform: rotate(180deg);
+			}
+			.cart>.dropdown{
+				position: absolute;
+				/* 绝对定位元素可以处于其他元素上方 */
+			top: 30px;
+			right:-1px;
+			border: 1px solid #ddd;
+			/* padding:2em 3em 2em 3em;上右下左 */
+			/* padding:2em 3em 2em ;上右下，左和右相同 */
+			padding: 2em 3em
+			/* 上右，下和左相同 */
+			width: 262px;
+			background: #fff;
+			/* DIV元素默认背景颜色为透明色 */
 			}
 		</style>
 	</head>
@@ -98,14 +146,29 @@
 	<!-- 搜索条 -->
 	<div class="searchbar">
 		<div class="container">
+			<!-- Logo -->
 			<img src="img/logo.png" alt="iweb LOGO">
+			<!-- 3.我的购物车 -->
+			<div class="cart" id="myCart">
+				<span class="fa fa-shopping-cart fa-lg"></span>
+				<span>我的购物车(<b>0</b>)</span>
+				<span class="fa fa-caret-down caret"></span>
+			</div>
 			<!-- 输入框 -->
 			<div class="search">
-				<input type="text" placeholder="课程搜索">
-				<span class="fa fa-search fa-1g"></span>
-				<!-- 我的购物车 -->
+				<input type="text" placeholder="课程搜索"><span class="fa fa-searchr"></span>
 			</div>
 		</div>
 	</div>
-	</body>
+	
+	<script>
+		// 
+		myCart.onmouseenter = () => {
+			carte.classList.add('carte-rotate')
+		}
+		myCart.onmouseleave = () == > {
+			carte.classList.remove
+		}
+	</script>
+</body>
 </html>
